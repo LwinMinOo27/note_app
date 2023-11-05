@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-poppins;
+  }
+}
+
+@layer components {
+  .container {
+    @apply md:max-w-3xl lg:max-w-5xl xl:max-w-7xl mx-auto px-4 py-8 min-h-screen;
+  }
+  .header {
+    @apply flex justify-between items-center mb-8 px-1;
+  }
+  .header h1 {
+    @apply uppercase text-3xl font-semibold text-[#333] tracking-wide;
+  }
+  .header button {
+    @apply flex items-center gap-1 bg-[#ddd] rounded-lg py-1 px-2 tracking-wide hover:bg-[#bbb];
+  }
+  .dark-mode {
+    @apply bg-black transition-colors duration-500 ease-in-out
+  }
+  .dark-mode h1{
+    @apply text-white
+  }
+  .note-list {
+    @apply sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+  .note {
+    @apply bg-[#eee] rounded-lg p-[1rem] min-h-[250px] flex flex-col justify-between shadow-md border-[1px] whitespace-pre-wrap mb-8 sm:mb-0;
+  }
+  .note-footer {
+    @apply flex justify-between items-center;
+  }
+  .note.new {
+    @apply bg-[#eee];
+  }
+  .save-btn {
+    @apply bg-blue-600 text-white px-3 py-1 rounded-2xl font-semibold hover:bg-blue-700;
+  }
+  .search-bar-container {
+    @apply bg-[#eee] flex items-center p-2 mb-8 rounded-lg;
+  }
+  .search-icon {
+    @apply mr-2;
+  }
+  .search-input {
+    @apply bg-transparent w-full outline-none p-1;
+  }
+}
